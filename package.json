@@ -2,28 +2,28 @@
   "name": "keeper-app-part-1-starting",
   "version": "1.0.0",
   "description": "",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "@material-ui/icons": "^4.11.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts": "3.2.0"
-  },
-  "devDependencies": {
-    "typescript": "3.3.3"
-  },
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "node serever",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aghyv/Keeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aghyv/Keeper/issues"
+  },
+  "homepage": "https://github.com/aghyv/Keeper#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5"
+  }
 }
